@@ -1,7 +1,16 @@
 from django.db import models
 
 
-class Order(models.Model):
+
+class Courier(models.Model):
+    fullname = models.CharField(max_length=30)
+    phone_number = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.fullname
+        
+      
+ class Order(models.Model):
     name = models.CharField(max_length=20)
     price = models.IntegerField()
     quantity = models.IntegerField()
@@ -9,10 +18,3 @@ class Order(models.Model):
 
     def __str__(self):
         return self.name
-
-
-
-
-
-
-
