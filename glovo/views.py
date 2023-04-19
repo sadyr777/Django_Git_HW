@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Courier
+
+
+def get_courier(request):
+    couriers = Courier.objects.all()
+    return render(request, 'get_courier.html', {'couriers': couriers})
