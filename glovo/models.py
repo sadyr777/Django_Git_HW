@@ -10,7 +10,7 @@ class Courier(models.Model):
         return self.fullname
         
       
- class Order(models.Model):
+class Order(models.Model):
     name = models.CharField(max_length=20)
     price = models.IntegerField()
     quantity = models.IntegerField()
